@@ -1,11 +1,11 @@
 ---
-title: 'Images and embeds'
-description: 'Add image, video, and other HTML elements'
-icon: 'image'
+title: "Images and embeds"
+description: "Add image, video, and other HTML elements"
+icon: "image"
 ---
 
 <img
-  style={{ borderRadius: '0.5rem' }}
+  style={{ borderRadius:"0.5rem" }}
   src="https://mintlify-assets.b-cdn.net/bigbend.jpg"
 />
 
@@ -31,23 +31,12 @@ To get more customizability with images, you can also use [embeds](/writing-cont
 
 ## Embeds and HTML elements
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/4KzFe50RQkQ"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-  style={{ width: '100%', borderRadius: '0.5rem' }}
-></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4KzFe50RQkQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen style={{ width:"100%",borderRadius:"0.5rem" }} />
 
 <br />
 
 <Tip>
-
-Mintlify supports [HTML tags in Markdown](https://www.markdownguide.org/basic-syntax/#html). This is helpful if you prefer HTML tags to Markdown syntax, and lets you create documentation with infinite flexibility.
-
+  Mintlify supports [HTML tags in Markdown](https://www.markdownguide.org/basic-syntax/#html). This is helpful if you prefer HTML tags to Markdown syntax, and lets you create documentation with infinite flexibility.
 </Tip>
 
 ### iFrames
@@ -56,4 +45,60 @@ Loads another HTML page within the document. Most commonly used for embedding vi
 
 ```html
 <iframe src="https://www.youtube.com/embed/4KzFe50RQkQ"> </iframe>
+```
+
+| | | |
+| --- | --- | --- |
+| | | |
+| | | |
+| | | |
+
+```
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="1" rowspan="1">
+                <strong>限制项</strong>
+                <br/>
+            </th>
+            <th colspan="1" rowspan="1">
+                <strong>限制值</strong>
+                <br/>
+            </th>
+            <th colspan="1" rowspan="1">
+                <strong>说明</strong>
+                <br/>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="1" rowspan="1">
+                单环境内允许的产品实例总数量
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                参考订阅计划版本约束
+                <br/>
+            </td>
+            <td colspan="1" rowspan="2">
+                如当前限制有不满足，通过工单寻求帮助
+                <a href="/docs/zh/automq-cloud/support/obtaining-services">获取人工服务▸</a>
+                 。
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1">
+                单环境内成员账号数量
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                100 个
+                <br/>
+            </td>
+        </tr>
+    </tbody>
+</table>
 ```
