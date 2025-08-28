@@ -11,7 +11,7 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "AutoMQ Self-Managed",
+        "tab": "Self-Managed",
         "groups": [
           {
             "group": "What is AutoMQ?",
@@ -22,7 +22,7 @@
         ]
       },
       {
-        "tab": "AutoMQ Cloud",
+        "tab": "Cloud",
         "groups": [
           {
             "group": "What is AutoMQ Cloud?",
