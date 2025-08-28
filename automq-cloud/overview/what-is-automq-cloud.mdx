@@ -1,0 +1,374 @@
+---
+title: "AutoMQ Cloud: Fully Managed Kafka Service"
+description: "AutoMQ Cloud offers fully managed, next-gen Kafka service with cloud-native scalability, cost efficiency, and 100% Apache Kafka compatibility. Enjoy pay-as-you-go savings and robust enterprise features."
+keywords: ["AutoMQ Cloud","Kafka cloud service","fully managed Kafka","event stream processing","high availability Kafka","disaster recovery Kafka","BYOC model Kafka","SaaS model Kafka","enterprise Kafka features","multi-cloud Kafka deployment"]
+---
+
+# What Is AutoMQ Cloud
+
+
+<div class="automq-EN">
+
+
+import Admonition from '@theme/Admonition';
+
+import doc1 from './what-is-automq-cloud/1.jpg';
+
+import doc2 from './what-is-automq-cloud/2.jpg';
+
+
+
+## Overview
+
+AutoMQ Cloud is a next-generation, fully managed Kafka cloud service provided by AutoMQ HK Limited. It enables enterprise developers to easily build and run event stream processing applications in a Public Cloud environment without worrying about cluster operations and maintenance.
+
+AutoMQ Cloud is fully compatible with open-source Apache Kafka and offers significant enhancements and improvements for enterprise-level scenarios such as high availability, disaster recovery architecture, elasticity, and observability operations compared to Apache Kafka.
+
+AutoMQ Cloud supports both SaaS mode and BYOC mode, based on the differences in underlying resource ownership accounts and operation responsibilities. In SaaS mode, users only need to access service endpoints, without concerning themselves with the underlying cloud resources, which are managed by the AutoMQ service provider. In BYOC mode, the software service is deployed in the user's cloud account, ensuring that data does not leave the user's VPC, thus achieving higher privacy protection and data security standards.
+
+For detailed information about the SaaS mode and BYOC mode, refer to [Overview▸](/docs/automq-cloud/manage-environments/overview).
+
+
+
+<img src={doc1} />
+
+
+
+
+
+
+
+
+<img alt="AutoMQ Cloud SaaS Version" src={doc2} />
+
+
+AutoMQ Cloud SaaS Edition
+
+
+
+## Core Advantages
+
+AutoMQ Cloud offers the following advantages:
+
+#### Pay-as-you-go, with a 50% Reduction on Cloud Bills
+
+AutoMQ's new cloud-native architecture fully leverages **object storage** and cloud **elastic computing** resources, providing significant cost advantages over Apache Kafka and other competitor solutions.
+
+By enabling AutoMQ Cloud, you can fully utilize resources on demand and pay-as-you-go, with a 50% reduction on cloud bills.
+
+
+
+#### Fully Managed, Maintenance-free, with SLA Assurance
+
+AutoMQ Cloud is a fully managed cloud service offered by the AutoMQ Team for Public Cloud environments. Users can start using the service with just one click, without worrying about cluster deployment, changes, or other maintenance operations. The AutoMQ Team provides 24/7 operational support and SLA assurance.
+
+
+
+#### Supports BYOC, Resources Deployed in User VPC, No Cross-network Data
+
+In addition to the traditional SaaS model, AutoMQ Cloud also supports the BYOC model, where cloud resources are deployed in the user's VPC. Users can access AutoMQ without cross-network connectivity, and can also utilize existing cloud account resource discounts.
+
+
+
+#### Enterprise-Level Capabilities Out of the Box
+
+AutoMQ Cloud enhances the Community Edition with enterprise-level features such as auto-scaling, second-level partition reassignment, and integrated system observability. Users can utilize these enhancements immediately upon service activation without additional development.
+
+
+
+#### Native Multi-Cloud Support
+
+The cloud-native architecture of AutoMQ relies solely on Public Cloud-based object storage and virtual machine products, inherently supporting multi-cloud deployments. Enterprise customers can activate and use AutoMQ Cloud within mainstream cloud environments.
+
+
+
+## Choosing the Service Version
+
+AutoMQ offers AutoMQ Cloud and AutoMQ Enterprise for enterprise customers. The former is a fully managed cloud service provided by the AutoMQ Team, available in both SaaS and BYOC models; the latter is enterprise-grade software designed for IDC Private Cloud deployment scenarios.
+
+Enterprise customers can refer to the table below to select the most suitable service version.
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="1" rowspan="1">
+                <strong>Comparison Item</strong>
+                <br/>
+            </th>
+            <th colspan="2" rowspan="1">
+                <strong>AutoMQ Cloud</strong>
+                <br/>
+            </th>
+            <th colspan="1" rowspan="1">
+                <strong> AutoMQ Enterprise</strong>
+                <br/>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="1" rowspan="1">
+                <strong>Service Model</strong>
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                SaaS Fully Managed Service [1]
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                BYOC Fully Managed Service [2]
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                On-Premises Software [3]
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1">
+                <strong>Deployment Environment</strong>
+                <br/>
+            </td>
+            <td colspan="2" rowspan="1">
+                Primarily for Public Cloud environments, supporting major Cloud providers:
+                <br/>
+                <ul>
+                    
+<li>AWS</li>
+
+                    
+<li>Azure</li>
+
+                    
+<li>GCP</li>
+
+                    
+<li>Alibaba Cloud</li>
+
+                    
+<li>Tencent Cloud</li>
+
+                    
+<li>Huawei Cloud</li>
+
+                    
+<li>Baidu Cloud</li>
+
+                    
+<li>Chinatelecom Cloud</li>
+
+                </ul>
+            </td>
+            <td colspan="1" rowspan="1">
+                Primarily for IDC environments, supporting the following storage stacks:
+                <br/>
+                <ul>
+                    
+<li>MinIO</li>
+
+                    
+<li>Ceph</li>
+
+                    
+<li>CubeFS</li>
+
+                    
+<li>HDFS</li>
+
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1">
+                <strong>Resource Ownership</strong>
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                IaaS resources owned by AutoMQ cloud account
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                IaaS resources owned by user cloud account
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                IaaS resources owned by user
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1">
+                <strong>Data Sovereignty</strong>
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                100% secure, managed by AutoMQ cloud account
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                100% private, data remains within the user VPC
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                100% private, data remains within the user private network
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1">
+                <strong>Maintenance Method</strong>
+                <br/>
+            </td>
+            <td colspan="2" rowspan="1">
+                One-click activation via cloud marketplace, official website, etc., fully managed services covering the following scenarios:
+                <br/>
+                <ul>
+                    
+<li>Deployment</li>
+
+                    
+<li>Version upgrades (new features and bug fixes)</li>
+
+                    
+<li>Parameter tuning</li>
+
+                    
+<li>System alerts</li>
+
+                    
+<li>Online fault handling</li>
+
+                </ul>
+            </td>
+            <td colspan="1" rowspan="1">
+                All maintenance operations executed by the customer, with remote technical support provided by the AutoMQ technical team
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1">
+                <strong>Payment Method</strong>
+                <br/>
+            </td>
+            <td colspan="2" rowspan="1">
+                <ul>
+                    
+<li>Pay-as-you-go: charged by usage per hour</li>
+
+                    
+<li>Annual/monthly subscription: prepay for specified plans and entitlements</li>
+
+                </ul>
+            </td>
+            <td colspan="1" rowspan="1">
+                <ul>
+                    
+<li>Annual Subscription: Pay annually, with predefined specifications and benefits</li>
+
+                    
+<li>Perpetual License: One-time purchase for software usage rights</li>
+
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1">
+                <strong>Cost Structure</strong>
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                Subscription fee (pricing includes cloud resources)
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                <ul>
+                    
+<li>Subscription fee (pricing excludes cloud resources)</li>
+
+                    
+<li>Cloud resource fee (payable to Cloud providers)</li>
+
+                </ul>
+            </td>
+            <td colspan="1" rowspan="1">
+                <ul>
+                    
+<li>Software license fee</li>
+
+                    
+<li>Machine resource fee (self-provided)</li>
+
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1">
+                <strong>Technical Support</strong>
+                <br/>
+            </td>
+            <td colspan="2" rowspan="1">
+                <ul>
+                    
+<li>Expert technical support</li>
+
+                    
+<li>24/7 online emergency response</li>
+
+                </ul>
+            </td>
+            <td colspan="1" rowspan="1">
+                <ul>
+                    
+<li>Expert technical support</li>
+
+                    
+<li>8/5 online emergency response</li>
+
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" rowspan="1">
+                <strong>Applicable Scenarios</strong>
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                Default option for Public Cloud customers
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                Ideal for some Public Cloud customers who wish to leverage IaaS discounts, keep data within the VPC, and accept operational authorization
+                <br/>
+            </td>
+            <td colspan="1" rowspan="1">
+                Suitable for financial, government, and enterprise customers requiring data sovereignty, complete environment isolation, and offline IDC
+                <br/>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+**Annotation Notes:** 
+
+\[1\] Refers to deploying both the control plane and data plane of AutoMQ Cloud into the customer's cloud account VPC, providing a fully managed service.
+
+\[2\] Refers to deploying both the control plane and data plane of AutoMQ Cloud into AutoMQ Inc.'s cloud account VPC, connected to the customer's VPC via VPC PrivateLink or VPC Peering.
+
+\[3\] Refers to deploying both the control plane and data plane of AutoMQ Enterprise into the customer's private data center, managed by the customer with technical support and version upgrades provided by AutoMQ Inc.
+
+\[4\] In the BYOC (Bring Your Own Cloud) model, during the operation of the AutoMQ Server, generated logs, metrics, and diagnostic data are stored in a separate object storage bucket. Customers need to authorize cross-account access for this bucket to the main account of the AutoMQ Team. The AutoMQ operations platform analyzes the customer's cluster logs and metrics in real-time, ensuring stable operation of the customer's cluster through the expertise of the AutoMQ professional development team.
+
+\[5\] AutoMQ Cloud is equipped with automatic fault recovery features, which monitor various performance metrics of the cluster in real-time and automatically isolate any nodes that exhibit anomalies. This ensures fault recovery before it impacts the application, typically completing the process within a few minutes. Subsequently, the AutoMQ engineering team conducts a root cause analysis of the fault in the background.
+
+
+
+## Related Content
+
+- **Quick Experience of AutoMQ Cloud:** [Overview▸](/docs/automq-cloud/getting-started/overview)
+
+
+
+
+
+</div>

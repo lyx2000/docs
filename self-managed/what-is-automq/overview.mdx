@@ -1,0 +1,91 @@
+---
+title: "AutoMQ: Cloud-Native Kafka with 100x Elasticity, 10x Cost"
+description: "AutoMQ offers cloud-native scalability, 100% Kafka compatibility, and cost efficiency with 10x savings and 100x elasticity. Learn more about its innovative design."
+keywords: ["cloud-native Kafka service","Apache Kafka compatibility","Kafka storage decoupling","shared cloud storage","S3Stream repository","object storage benefits","AutoMQ elasticity","Kafka cost efficiency","Kafka reliability","Kafka availability"]
+---
+
+# Overview
+
+
+<div class="automq-EN">
+
+
+import Admonition from '@theme/Admonition';
+
+
+
+# What Is AutoMQ
+
+AutoMQ redesigns Kafka for the cloud by decoupling storage to object storage, offering users up to **10x cost efficiency** and **100x scalability advantages** while maintaining **100% compatibility** with Apache Kafka. 
+
+## Design Philosophy
+
+### Decoupling Storage to Shared Cloud Storage Services
+
+The advantages of separating compute and storage have been widely recognized. However, the industry often implements this by decoupling storage into a self-managed distributed storage software, which significantly increases the complexity of software deployment, maintenance, and governance. AutoMQ believes that decoupling storage from the software and moving it to shared cloud storage services is the optimal solution in the cloud-native era.
+
+By building the streaming storage engine S3Stream on S3, AutoMQ offloads storage to the shared cloud storage S3 provided by cloud vendors, delivering low-cost, highly available, highly reliable, and virtually limitless streaming storage capabilities. For more technical details, please refer to the technical architecture section.
+
+### Shared Storage vs. Shared Nothing Architecture
+
+Apache Kafka® uses local disks to achieve high-durability storage, providing an abstraction of infinite streaming storage for business logic. All data is stored on the disks of each node according to specific logic, a design commonly referred to as Shared Nothing architecture.
+
+Local disks lack scalability, so the Shared Nothing architecture typically achieves higher throughput through horizontal scaling. However, shared cloud storage has become highly elastic with near "infinite" capacity, making it easier to fully leverage the capabilities of cloud storage at a lower cost by adopting a shared storage architecture.
+
+### Reliability and Availability Separation
+
+Apache Kafka® natively supports a multi-replica mechanism to ensure data durability through replica redundancy. It enhances system availability via a fast failover mechanism achieved through leader election among different replicas.
+
+In cloud environments, EBS has a built-in 3-replica storage mechanism. If Kafka also implements a 3-replica storage system, it would result in data being stored 9 times, significantly increasing storage, bandwidth, and computational costs. AutoMQ Inc. believes that cloud-native Kafka no longer requires a multi-replica mechanism to provide both reliability and availability. By separating reliability to cloud storage and independently providing availability, it achieves true cloud-native implementation.
+
+## Storage Options
+
+The leading Public Cloud providers offer a variety of mature storage services, which can be broadly categorized into the following three types:
+
+- **Object Storage:** This is the largest scale storage service provided by Cloud providers, characterized by low cost and large data scale advantages. It serves as the foundation for modern data warehouses and data lakes, such as AWS S3.
+
+- **Block Storage:** This is a high-performance block storage service offered by Cloud providers, such as AWS EBS. It is known for its low latency, high performance, and relatively high cost.
+
+- **File Storage:** Primarily shared file storage services using the NFS protocol, providing flexible storage space and throughput capabilities, such as AWS EFS and AWS FSx.
+
+Different cloud providers have subtle differences in shared storage services. AutoMQ supports multi-modal shared storage and will select the best storage option on various Public Clouds to achieve multi-zone support with a shared storage architecture across all mainstream Public Clouds. This results in low latency, low cost, and stateless product effects.
+
+## Technical Advantages
+
+AutoMQ has the following advantages compared to Apache Kafka®:
+
+### 10x Cost Advantage
+
+The new cloud-native architecture of AutoMQ fully leverages the high availability and elastic provisioning capabilities of **object storage**, bringing **10x cost efficiency** to customers compared to Apache Kafka.
+
+- Using object storage as the core primary storage can significantly reduce storage costs.
+
+- Achieve high availability without duplicating multiple replicas, saving 2/3 of the traffic and replication costs.
+
+- Native support for Spot instances and AutoScaling, no need to reserve resources for peak loads.
+
+### Extreme Elasticity
+
+AutoMQ separates state storage to object storage services, ensuring a completely stateless business logic layer. AutoMQ clusters can complete partition reassignment and traffic self-balancing within seconds, effectively solving the slow rebalancing and difficult partition reassignment issues encountered during Apache Kafka scaling operations. By integrating with cloud providers' elastic scaling group policies, adaptive elastic scaling of the cluster is easily achieved.
+
+### Cold Reads Do Not Affect Message Writing
+
+Each Apache Kafka server provides fixed IOPS for message read and write operations. If there is a large-scale cold read, causing IOPS to hit the limit, message writing may queue up and timeout. This is due to the limitations of Kafka's integrated storage and compute architecture. In contrast, AutoMQ adopts a storage-compute separation architecture, where cold and hot reads/writes do not interfere with each other. Cold read throughput depends on the object storage's throughput capacity, and EBS is used exclusively as WAL for the write message process. Therefore, this issue is effectively avoided in the AutoMQ architecture.
+
+### Zero Service Interruption
+
+AutoMQ stores all data on S3, thus during cluster scaling, there is no need for data replication to quickly respond to sudden traffic spikes. In comparison, Apache Kafka requires substantial bandwidth for data replication after scaling, making it challenging to handle sudden traffic surges. Through features like auto-scaling, auto-traffic balancing, and automatic fault recovery, AutoMQ achieves a high level of system autonomy, ensuring higher availability without manual intervention.
+
+### 100% Compatibility with Apache Kafka®
+
+Unlike other vendors who reimplement the Kafka protocol, AutoMQ uses a minimal storage layer replacement approach. By only modifying the underlying LogSegment implementation while keeping the main Apache Kafka code unchanged, AutoMQ easily achieves 100% compatibility with Apache Kafka and quickly adapts to new versions.
+
+## Related Content
+
+- For a quick experience with AutoMQ, please refer to: [Deploy Multi-Node Test Cluster on Docker▸](/docs/automq/getting-started/deploy-multi-nodes-test-cluster-on-docker).
+
+
+
+
+
+</div>

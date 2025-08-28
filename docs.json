@@ -3,7 +3,7 @@
   "theme": "mint",
   "name": "Mint Starter Kit",
   "colors": {
-    "primary": "#16A34A",
+    "primary": "#2449D4",
     "light": "#07C983",
     "dark": "#15803D"
   },
@@ -11,38 +11,23 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "AutoMQ Self-Managed",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "What is AutoMQ?",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "self-managed/what-is-automq/overview"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "AutoMQ Cloud",
+        "groups": [
           {
-            "group": "Customization",
+            "group": "What is AutoMQ Cloud?",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "automq-cloud/overview/what-is-automq-cloud"
             ]
           }
         ]
@@ -72,17 +57,17 @@
       "anchors": [
         {
           "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
+          "href": "https://www.automq.com/docs",
           "icon": "book-open-cover"
         },
         {
           "anchor": "Community",
-          "href": "https://mintlify.com/community",
+          "href": "https://go.automq.com/slack",
           "icon": "slack"
         },
         {
           "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
+          "href": "https://www.automq.com/blog",
           "icon": "newspaper"
         }
       ]
@@ -96,13 +81,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:support@automq.com"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "AutoMQ",
+      "href": "https://www.automq.com"
     }
   },
   "contextual": {
