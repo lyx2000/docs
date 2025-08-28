@@ -74,8 +74,8 @@
     }
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/automq-black.svg",
+    "dark": "/logo/automq-white.svg"
   },
   "navbar": {
     "links": [
